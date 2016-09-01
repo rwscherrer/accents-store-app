@@ -1,3 +1,27 @@
 // Place all the styles related to the accents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+  border-style: double;
+  border-width: medium;
+  margin: 25px;
+  padding: 25px;
+  text-align: center;
+}
+
+h2 {
+  border-style: groove;
+  background-color: #D0D0D0;
+
+}
+
+img {
+      border-radius: 25px;
+    border: 2px solid #101010;
+  
+}
+

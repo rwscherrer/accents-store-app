@@ -1,10 +1,10 @@
 <h1>All Accents</h1>
 
 <h2>  <% @all_accents.each do |accent| %> </h2>
-<h3> Name: <%= accent.name  %> </h3>
+<h2> <%= accent.name  %> </h2>
 <h3> Price: $<%= accent.price %>  </h3>
 <h3> <img src=<%= accent.image %>  > </h3>
-<h3> Description: <%= accent.description  %> </h3>
+<h3> <%= accent.description  %> </h3>
 <br>
 
 <% end %>
