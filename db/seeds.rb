@@ -15,5 +15,5 @@ accent.save
 accent = Accent.new({"name" => "Latka Gravas", "price" => 100000, "image" => "http://www.trbimg.com/img-5284f864/turbine/-andy-kaufman-is-alive-brother-says-20131114-001/600/441x600", "description" => "We will guide you when to Ibbi da and when to Ibbi dont."})
 accent.save
 
-accent = Accent.new({"name" => "Swedish Chef", "price" => 1000000, "image" => "https://images.otto.de/asset/mmo/formatz/butlers-muppets-dose-swedish-chef-11506059.jpg", "description" => "You will hurna burna, and beryk a beryk like no other. If need be we will put a pan on your head - chirr-kens not included."})
+accent = Accent.new({"name" => "Swedish Chef", "price" => 1000000, "image" => "http://images4.fanpop.com/image/photos/16800000/Swedish-Chef-swedish-chef-16861480-300-300.jpg", "description" => "You will hurna burna, and beryk a beryk like no other. If need be we will put a pan on your head - chirr-kens not included."})
 accent.save
