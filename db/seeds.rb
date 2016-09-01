@@ -9,11 +9,11 @@
 accent = Accent.new({"name" => "Charlie Brown adult", "price" => 1000, "image" => "http://www.benstich.com/wp-content/uploads/2014/04/charliebrown.jpg", "description" => "You will wah wah wah with the best of them."})
 accent.save
 
-accent = Accent.new({"name" => "Yosemite Sam", "price" => 10000, "image" => "http://vignette2.wikia.nocookie.net/looneytunes/images/d/d8/Yosemite_Sam.jpg/revision/latest?cb=20130824013230", "description" => "We will teach you to wag your tounge on every S just like Sam."})
+accent = Accent.new({"name" => "Sylvester", "price" => 10000, "image" => "http://www.picgifs.com/clip-art/cartoons/sylvester/clip-art-sylvester-185634.jpg", "description" => "We will teach you Sssthufferin Sssthuccotash."})
 accent.save
 
-accent = Accent.new({"name" => "Latka Gravas", "price" => 100000, "image" => "http://www.trbimg.com/img-5284f864/turbine/-andy-kaufman-is-alive-brother-says-20131114-001/600/441x600", "description" => "We will guide you when to Ibbi da and when to Ibbi dont"})
+accent = Accent.new({"name" => "Latka Gravas", "price" => 100000, "image" => "http://www.trbimg.com/img-5284f864/turbine/-andy-kaufman-is-alive-brother-says-20131114-001/600/441x600", "description" => "We will guide you when to Ibbi da and when to Ibbi dont."})
 accent.save
 
-accent = Accent.new({"name" => "Swedish Chef", "price" => 1000000, "image" => "http://cf2.foodista.com/sites/default/files/styles/featured/public/field/image/swedish chef.jpg", "description" => "You will hurna burna, and beryk beryk like no other. If need be we will put a pan on your head - chirr-kens not provided"})
+accent = Accent.new({"name" => "Swedish Chef", "price" => 1000000, "image" => "https://images.otto.de/asset/mmo/formatz/butlers-muppets-dose-swedish-chef-11506059.jpg", "description" => "You will hurna burna, and beryk a beryk like no other. If need be we will put a pan on your head - chirr-kens not included."})
 accent.save
