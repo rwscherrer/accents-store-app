@@ -10,4 +10,12 @@ class AccentsController < ApplicationController
     
   end
 
+  def get_form
+  
+  end
+
+  def send_form
+    @email = params[:email]
+  end
 end
+
