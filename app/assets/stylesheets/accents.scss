@@ -4,18 +4,20 @@
 
 
 body {
-  font: 100% Helvetica, sans-serif;
+  
   background-color: #efefef;
   border-style: double;
   border-width: medium;
   margin: 25px;
   padding: 25px;
   text-align: center;
+  text-decoration: none;
 }
 
 h2 {
   border-style: groove;
   background-color: #D0D0D0;
+  text-decoration: none;
 
 }
 
@@ -23,6 +25,7 @@ div {
 
   margin: 50px;
   padding: 25px;
+  text-decoration: none;
 
 }
 
@@ -32,5 +35,25 @@ img {
       border-radius: 25px;
     border: 2px solid #101010;
   
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
 }
 

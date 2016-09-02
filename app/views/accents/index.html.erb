@@ -1,0 +1,12 @@
+<h1>Want to learn some fancy talking?</h1>
+<h1>Buy an accent!</h1>
+
+
+<% @all_accents.each do |accent| %>
+<!-- <h2><a href='/accents/<%= accent.id %>' </a> <%= accent.name %></h2> -->
+<h2> <%= link_to accent.name, "/accents/#{accent.id}" %> </h2>
+<h3> $<%= accent.price %></h3>
+<h3> <img src=<%= accent.image %>  > </h3>
+<h3><%= accent.description %></h3>
+<br>
+<% end %>
