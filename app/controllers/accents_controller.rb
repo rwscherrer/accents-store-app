@@ -13,9 +13,6 @@ class AccentsController < ApplicationController
 
   end
 
-  def new1
-
-  end
 
 
   def create
@@ -23,8 +20,8 @@ class AccentsController < ApplicationController
                             price: params[:price],
                             image: params[:image],
                             description: params[:description])
-    render 'show.html.erb'
-
+    flash[:success] = "New Accent Created"
+    redirect_to "/accents/#{@accent_id}"
   end
 
   def edit 
@@ -32,12 +29,14 @@ class AccentsController < ApplicationController
   end
 
   def update
-    @accent = Accent.find(params[:id])
-    @accent = Accent.update(name: params[:name], 
+    accent = Accent.find(params[:id])
+    accent = accent.update(name: params[:name], 
                               price: params[:price], 
                               image: params[:image], 
                               description: params[:description])
-    render 'show.html.erb'
+
+    flash[:success] = "Accent Updated"
+    redirect_to "/#{@accent_id}"
   end
     
 
@@ -58,6 +57,15 @@ class AccentsController < ApplicationController
 
   def send_form
     @email = params[:email]
+    redirect_to '/'
+  end
+
+  def destroy
+    @accent = Accent.find(params[:id])
+    @accent.destroy
+
+    flash[:warning] = "And... It's Gone."
+    redirect_to '/'
   end
 
 end

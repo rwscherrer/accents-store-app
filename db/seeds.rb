@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-accent = Accent.new({"name" => "Charlie Brown adult", "price" => 1000, "image" => "http://www.benstich.com/wp-content/uploads/2014/04/charliebrown.jpg", "description" => "You will wah wah wah with the best of them."})
+accent = Accent.new({"name" => "Charlie Brown Adults", "price" => 1000, "image" => "http://www.benstich.com/wp-content/uploads/2014/04/charliebrown.jpg", "description" => "You will wah wah wah with the best of them."})
 accent.save
 
 accent = Accent.new({"name" => "Sylvester", "price" => 10000, "image" => "http://www.picgifs.com/clip-art/cartoons/sylvester/clip-art-sylvester-185634.jpg", "description" => "We will teach you Sssthufferin Sssthuccotash."})

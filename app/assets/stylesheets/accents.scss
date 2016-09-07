@@ -4,10 +4,17 @@
 
 
 body {
-  
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
   background-color: #efefef;
+  background-image: url('old_moon.png');
   border-style: double;
   border-width: medium;
+  border-color: #000000;
   margin: 25px;
   padding: 25px;
   text-align: center;
@@ -16,24 +23,21 @@ body {
 
 h2 {
   border-style: groove;
+  border-color: #D0D0D0;
   background-color: #D0D0D0;
   text-decoration: none;
 
 }
 
-div {
 
-  margin: 50px;
-  padding: 25px;
-  text-decoration: none;
 
-}
 
 
 
 img {
-      border-radius: 25px;
+    border-radius: 25px;
     border: 2px solid #101010;
+    border-color: #000000;
   
 }
 
