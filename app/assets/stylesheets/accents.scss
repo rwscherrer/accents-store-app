@@ -4,13 +4,12 @@
 
 
 body {
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
   line-height: 26.4px;
-  background-color: #efefef;
   background-image: url('old_moon.png');
   border-style: double;
   border-width: medium;
@@ -18,19 +17,23 @@ body {
   margin: 25px;
   padding: 25px;
   text-align: center;
-  text-decoration: none;
+
 }
 
 h2 {
-  border-style: groove;
-  border-color: #D0D0D0;
-  background-color: #D0D0D0;
-  text-decoration: none;
+  border-radius: 25px;
+  background-image: url('concrete_seamless.png');
+  color: #808080;
+
 
 }
 
 
-
+nav {
+  border-radius: 25px;
+  background-image: url('concrete_seamless.png');
+  color: #808080;
+}
 
 
 
@@ -43,21 +46,21 @@ img {
 
 a:link {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 a:visited {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 a:active {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
