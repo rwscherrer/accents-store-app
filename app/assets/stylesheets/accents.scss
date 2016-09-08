@@ -17,15 +17,13 @@ body {
   margin: 25px;
   padding: 25px;
   text-align: center;
-
 }
 
 h2 {
   border-radius: 25px;
+  border-color: #808080;
   background-image: url('concrete_seamless.png');
   color: #808080;
-
-
 }
 
 
@@ -35,13 +33,15 @@ nav {
   color: #808080;
 }
 
+.discount-price {
+  color: red;
+}
 
 
 img {
     border-radius: 25px;
     border: 2px solid #101010;
-    border-color: #000000;
-  
+    border-color: #808080;
 }
 
 a:link {

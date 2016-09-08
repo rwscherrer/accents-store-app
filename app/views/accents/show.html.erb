@@ -2,11 +2,17 @@
 
 
 <h2> <%= @accent.name %></h2>
-<h3> $<%= @accent.price %></h3>
-<h3> <img src=<%= @accent.image %>  > </h3>
-<h3><%= @accent.description %></h3>
+  <% if @accent.discounted? %>
+    <h3> Discount Item!</h3>
+  <% else %>
+    <h3> On Sale! </h3>
+  <% end %>
+
+<p class="<%= "discount_price" if @accent.discounted? %>">Price: <%= number_to_currency(@accent.price) %></p>
+<p></p>Tax: <%= number_to_currency(@accent.tax) %></p>
+<p> Total: <%= number_to_currency(@accent.total) %></p>
+<img src=<%= @accent.image %>  >
+<p><%= @accent.description %></p>
 <h2><%= link_to 'Home', '/accents' %> -
 <%= link_to 'Edit', "/accents/#{@accent.id}/edit" %> -
 <%= link_to 'Delete', "/accents/#{@accent.id}", method: :delete %></h2>
-
-<br>
