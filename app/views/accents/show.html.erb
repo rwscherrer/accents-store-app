@@ -9,7 +9,7 @@
   <% end %>
 
 <p class="<%= "discount_price" if @accent.discounted? %>">Price: <%= number_to_currency(@accent.price) %></p>
-<p></p>Tax: <%= number_to_currency(@accent.tax) %></p>
+<p>Tax: <%= number_to_currency(@accent.tax) %></p>
 <p> Total: <%= number_to_currency(@accent.total) %></p>
 <img src=<%= @accent.image %>  >
 <p><%= @accent.description %></p>

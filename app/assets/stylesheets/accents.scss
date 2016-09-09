@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   font-size: 24px;
@@ -33,12 +32,7 @@ nav {
   color: #808080;
 }
 
-.discount-price {
-  color: red;
-}
-
-
-img {
+.img {
     border-radius: 25px;
     border: 2px solid #101010;
     border-color: #808080;
@@ -63,4 +57,12 @@ a:active {
     text-decoration: none;
     color: #000000;
 }
+
+
+.discount-price {
+  color: red;
+}
+
+
+
 
