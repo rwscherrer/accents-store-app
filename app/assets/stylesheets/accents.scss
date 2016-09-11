@@ -18,24 +18,30 @@ body {
   text-align: center;
 }
 
-h2 {
-  border-radius: 25px;
-  border-color: #808080;
-  background-image: url('concrete_seamless.png');
-  color: #808080;
-}
 
 
 nav {
-  border-radius: 25px;
   background-image: url('concrete_seamless.png');
-  color: #808080;
+  
 }
 
-.img {
+img {
+
     border-radius: 25px;
-    border: 2px solid #101010;
+    border: 3px solid #101010;
     border-color: #808080;
+}
+
+.index-list {
+  height: 600px;
+  background-image: url('concrete_seamless.png');
+}
+
+.thumbnail {
+  border-radius: 25px;
+  border: 1px solid #101010;
+  border-color: #808080;
+  
 }
 
 a:link {
