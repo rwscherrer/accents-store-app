@@ -1,40 +1,21 @@
-<!-- <h1>Want to learn some fancy talking?</h1>
-<h1>Buy an accent!</h1>
 
-
-  <% @all_accents.each_slice(3) do |accent_row| %>
-    <div class="container-fluid">
+    <section>
       <div class="row">
-        <% accent_row.each do |accent| %>
-          <div class="col-md-4">
-            <div class="well thumbnail index-list">
-              <h3> <%= link_to accent.name, "/accents/#{accent.id}" %> </h3>
-              <h3> <%= number_to_currency(accent.price) %></h3>
-              <h3> <img src=<%= accent.image %>  ></h3>
-              <h3><%= accent.description %></h3>
-            </div>  
+
+        <% @all_accents.each do |accent| %>
+
+          <div class="col-sm-4">
+            <div class="accent_single">
+              <h2 class="accent_header"><%= accent.name %></h2>
+              <p>Price: <%= number_to_currency(accent.price) %></p>
+              <a href="/accents/<%= accent.id %>" title="View Accent"><img src="<%= accent.top_image %>" alt="<%= accent.name %>" class="img-responsive accent_single_image"></a>
+              <p>Description: <%= accent.description %></p>
+            </div>
           </div>
         <% end %>
+
       </div>
-    </div>
-  <% end %> -->
-
-
-
-
-<div class="row">
-  <% @all_accents.each do |accent| %>
-    <div class="col-md-4">
-      <div class="well thumbnail index-list">
-       <h3> <%= link_to accent.name, "/accents/#{accent.id}" %> </h3>
-       <h3> <%= number_to_currency(accent.price) %> </h3>
-       <img src=<%= accent.image %> alt="<% accent.name %>" >
-       <h3> <%= accent.description %> </h3>
-      </div>
-    </div>
-  <% end %>
-</div>
-
+    </section>
 
 
 

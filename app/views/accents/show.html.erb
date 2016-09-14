@@ -11,8 +11,11 @@
 <p class="<%= "discount_price" if @accent.discounted? %>">Price: <%= number_to_currency(@accent.price) %></p>
 <p>Tax: <%= number_to_currency(@accent.tax) %></p>
 <p> Total: <%= number_to_currency(@accent.total) %></p>
-<img src=<%= @accent.image %>  >
+<% @accent.images.each do |image| %>
+  <img src="<%= image.url %>" alt="<% accent.name %>" class="img-responsive">
+  <% end %>
 <p><%= @accent.description %></p>
+<p><a href="/suppliers/<%= @supplier.id %>">Supplied By: <%= @supplier.name %></a></p>
 <h2><%= link_to 'Home', '/accents' %> -
 <%= link_to 'Edit', "/accents/#{@accent.id}/edit" %> -
 <%= link_to 'Delete', "/accents/#{@accent.id}", method: :delete %></h2>
