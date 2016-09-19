@@ -1,9 +1,13 @@
 class Accent < ApplicationRecord
   belongs_to :supplier
   has_many :images
+  has_many :orders
+  has_many :carted_products
+  has_many :accent_categories
+  has_many :categories, through: :accent_categories
 
   def discounted?
-    price.to_f < 2
+    price.to_f < 10000
   end
  
   def tax

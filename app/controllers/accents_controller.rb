@@ -12,6 +12,8 @@ class AccentsController < ApplicationController
       @all_accents = @all_accents.where("name ILIKE ? OR description ILIKE ?", fuzzy_search_term, fuzzy_search_term)
     end
 
+
+
     if discount_level
       @all_accents = @all_accents.where("price < ?", discount_level)
     end
@@ -26,6 +28,7 @@ class AccentsController < ApplicationController
   def show
     @accent = Accent.find(params[:id])
     @supplier = @accent.supplier.name
+    @categories = @accent.categories
   end
 
   def new

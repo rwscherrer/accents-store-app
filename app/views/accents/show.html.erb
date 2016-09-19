@@ -12,10 +12,34 @@
 <p>Tax: <%= number_to_currency(@accent.tax) %></p>
 <p> Total: <%= number_to_currency(@accent.total) %></p>
 <% @accent.images.each do |image| %>
-  <img src="<%= image.url %>" alt="<% accent.name %>" class="img-responsive">
+  <img src="<%= image.url %>" alt="<% @accent.name %>" class="img-responsive">
   <% end %>
 <p><%= @accent.description %></p>
-<p><a href="/suppliers/<%= @supplier.id %>">Supplied By: <%= @supplier.name %></a></p>
+
+<h3>Categories</h3>
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>
 <h2><%= link_to 'Home', '/accents' %> -
 <%= link_to 'Edit', "/accents/#{@accent.id}/edit" %> -
 <%= link_to 'Delete', "/accents/#{@accent.id}", method: :delete %></h2>
+
+
+<section>
+  <div>
+    <%= form_tag '/orders', method: :post do %>
+      <%= text_field_tag :quantity, nil, placeholder: "Quantity" %>
+      <%= hidden_field_tag :accent_id, @accent.id %>
+      <%= submit_tag 'Buy Now'%>
+    <% end %>
+     
+  </div>
+</section>
+
+
+
+
+
+
