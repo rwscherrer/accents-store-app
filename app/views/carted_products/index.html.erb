@@ -1,0 +1,13 @@
+
+
+<% @carted_products.each do |carted_product| %>
+
+
+      <h2>Accent ID:<%= carted_product.accent_id %></h2>
+      <h2>Quantity: <%= carted_product.quantity %></h2>
+      
+  
+<% end %>
+   <%= submit_tag 'Buy Now'%>
+     
+      

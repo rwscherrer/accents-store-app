@@ -29,11 +29,11 @@
 
 <section>
   <div>
-    <%= form_tag '/orders', method: :post do %>
+    <%= form_tag '/carted_products', method: :post do %>
       <%= text_field_tag :quantity, nil, placeholder: "Quantity" %>
       <%= hidden_field_tag :accent_id, @accent.id %>
-      <%= submit_tag 'Buy Now'%>
-    <% end %>
+    <%= submit_tag 'Add To Cart'%>
+    <% end %>  
      
   </div>
 </section>
