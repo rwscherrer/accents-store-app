@@ -1,26 +1,22 @@
 class OrdersController < ApplicationController
 
+  before_action :authenitcate_user!
+
   def create
-    accent = Accent.find(params[:accent_id])
-
-    @order = Order.new(user_id: current_user.id,
-                       quantity: params[:quantity],
-                       accent_id: params[:accent_id])
-                      
-
-    @order.calculate_subtotal(accent)
-    @order.calculate_tax
-    @order.calculate_total
-    @order.save
+    @carted_products = current_user.currently_carted
+    @order = Order.create(user_id: current_user.id)
+    @carted_products.update_all(order_id: @order.id, status: "purchased")
+    @order.calculate_totals
                         
 
     flash[:success] = "New Order Created"
-    redirect_to "/orders/#{@order.id}"
+    redirect_to '/orders/#{@order.id}'
   end
 
   def show
     @order = Order.find(params[:id])
-    @accent = @order.accent
+    redirect_to '/' if @order.user_id != current_user.id
+    end
   end
 
 end

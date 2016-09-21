@@ -1,22 +1,33 @@
 class CartedProductsController < ApplicationController
 
-  def index
-    @user_id = current_user.id
-    
+  before_action :authenticate_user!
 
-    @carted_products = CartedProduct.where(status: "Carted").where(user_id: current_user.id)
- 
+  def index
+
+    if current_user.currently_carted.any?
+      @carted_products = current_user.currently_carted
+    else
+      flash[:warning] = "Please add items to cart."
+      redirect_to '/'
+    end
+    
   end
 
   def create
-    accent = Accent.find(params[:accent_id])
-
-    @carted_product = CartedProduct.new(user_id: current_user.id, accent_id: params[:accent_id], quantity: params[:quantity], status: "Carted")
-
-    @carted_product.save
+    @carted_product = CartedProduct.create(accent_id: params[:accent_id],
+                                           user_id: current_user.id, 
+                                           quantity: params[:quantity], 
+                                           status: "carted")
 
     flash[:success] = "Items Added To Cart"
-    redirect_to "/carted_products"
+    redirect_to '/carted_products'
   end
 
+  def destroy
+    carted_product = CartedProduct.find(params[:id])
+    carted_product.update(status: "removed")
+
+    flash[:success] = "Product removed from cart"
+    redirect_to '/carted_products'
+  end
 end

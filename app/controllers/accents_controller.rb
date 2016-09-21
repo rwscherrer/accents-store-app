@@ -1,11 +1,16 @@
 class AccentsController < ApplicationController
 
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
+    @accents = Accent.all.includes(:images)
     @all_accents = Accent.all
     sort_attribute = params[:sort]
     sort_order = params[:sort_order]
     discount_level = params[:discount]
     search_term = params[:search_term]
+
+    
 
     if search_term
       fuzzy_search_term = "%#{search_term}%"
@@ -32,9 +37,11 @@ class AccentsController < ApplicationController
   end
 
   def new
+
   end
 
   def create
+  
     @accent = Accent.create(name: params[:name],
                             price: params[:price],
                             description: params[:description], 
@@ -45,13 +52,17 @@ class AccentsController < ApplicationController
 
     flash[:success] = "New Accent Created"
     redirect_to "/accents/#{@accent_id}"
+
   end
 
   def edit 
+   
     @accent = Accent.find(params[:id])
+ 
   end
 
   def update
+
     accent = Accent.find(params[:id])
     accent = accent.update(name: params[:name], 
                            price: params[:price], 
@@ -60,6 +71,7 @@ class AccentsController < ApplicationController
 
     flash[:success] = "Accent Updated"
     redirect_to "/#{@accent_id}"
+
   end
     
 
@@ -84,11 +96,13 @@ class AccentsController < ApplicationController
   end
 
   def destroy
-    @accent = Accent.find(params[:id])
-    @accent.destroy
+    
+      @accent = Accent.find(params[:id])
+      @accent.destroy
 
-    flash[:warning] = "And... It's Gone."
-    redirect_to '/'
+      flash[:warning] = "And... It's Gone."
+      redirect_to '/'
+ 
   end
 
   def random
