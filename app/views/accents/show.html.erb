@@ -34,7 +34,7 @@
     <%= form_tag '/carted_products', method: :post do %>
       <%= text_field_tag :quantity, nil, placeholder: "Quantity" %>
       <%= hidden_field_tag :accent_id, @accent.id %>
-    <%= submit_tag 'Add To Cart!'%>
+    <%= submit_tag 'Add To Cart!', class: "btn btn-default-outline"%>
     <% end %>  
      
   </div>

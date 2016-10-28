@@ -37,21 +37,26 @@ class AccentsController < ApplicationController
   end
 
   def new
-
+    @accent = Accent.new
   end
 
   def create
   
-    @accent = Accent.create(name: params[:name],
+    @accent = Accent.new(name: params[:name],
                             price: params[:price],
                             description: params[:description], 
                             supplier_id: params[:supplier][:supplier_id])
 
-    Image.create(url: params[:image], product_id: @accent.id) if params[:image]
-    Image.create(url: params[:image_2], product_id: @accent.id) if params[:image_2]
+    if @accent.save
 
-    flash[:success] = "New Accent Created"
-    redirect_to "/accents/#{@accent_id}"
+      Image.create(url: params[:image], product_id: @accent.id) if params[:image]
+      Image.create(url: params[:image_2], product_id: @accent.id) if params[:image_2]
+
+      flash[:success] = "New Accent Created"
+      redirect_to "/accents/#{@accent_id}"
+    else
+      render 'new.html.erb'
+    end
 
   end
 
@@ -86,9 +91,6 @@ class AccentsController < ApplicationController
     
   end
 
-  def get_form
-  
-  end
 
   def send_form
     @email = params[:email]

@@ -21,12 +21,12 @@ class ApplicationController < ActionController::Base
 private
 
   def authenticate_admin!
-    redidrect_to '/login' unless current_user && current_user.admin
+    redirect_to '/login' unless current_user && current_user.admin
 
   end
 
   def authenticate_user!
-    redidrect_to '/login' unless current_user
+    redirect_to '/login' unless current_user
   end
 
   def find_categories_list
@@ -35,7 +35,13 @@ private
 
   def calculate_cart_count
     if current_user
-      @cart_count = current_user.currently_carted.count
+      if session[:cart_count]
+        @cart_count = session[:cart_count]
+      else
+
+        @cart_count = current_user.currently_carted.count
+        session[:cart_count] = @cart_count
+      end
     else
       @cart_count = 0
     end

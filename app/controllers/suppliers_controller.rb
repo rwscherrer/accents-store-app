@@ -9,6 +9,7 @@ class SuppliersController < ApplicationController
   end
 
   def new
+    @supplier = supplier.new
   end
 
   def create
@@ -16,8 +17,14 @@ class SuppliersController < ApplicationController
                                 email: params[:email], 
                                 phone: params[:phone])
 
-    flash[:success] = "New Supplier Created"
-    redirect_to "/suppliers/#{@supplier_id}"
+    if @supplier.save
+
+      flash[:success] = "New Supplier Created"
+      redirect_to "/suppliers/#{@supplier_id}"
+    else
+      render 'new.html.erb'
+    end
+
   end
 
   def edit
