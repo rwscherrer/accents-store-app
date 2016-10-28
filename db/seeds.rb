@@ -48,7 +48,7 @@ Supplier.create!([
   {name: "Funny Talkers", email: "funnyguy@funnytalkers.com", phone: "773-555-1234"}
 ])
 User.create!([
-  {name: "joe", email: "joe@gmail.com", password_digest: "$2a$10$g98sxnm6SWN2irVsawn7wesPoHK7XapZUeeXq0MJ6ckz5VOpzuTWy", admin: false},
-  {name: "AdminBob", email: "adminbob@gmail.com", password_digest: "$2a$10$j8ERxrk1cf6QaThmV8ARWux.WZHtWPhUVt5SF1a9ezEBJ1sJk72hy", admin: true},
-  {name: "Bill", email: "bill@gmail.com", password_digest: "$2a$10$GpwmBNpiYjIIKAOWusOsPeTayXCkul77g/VwQX2FQf/orCeaaF8CO", admin: false}
+  {name: "joe", email: "joe@gmail.com", password: "$2a$10$g98sxnm6SWN2irVsawn7wesPoHK7XapZUeeXq0MJ6ckz5VOpzuTWy", admin: false, password_confirmation: nil},
+  {name: "AdminBob", email: "adminbob@gmail.com", password: "$2a$10$j8ERxrk1cf6QaThmV8ARWux.WZHtWPhUVt5SF1a9ezEBJ1sJk72hy", admin: true, password_confirmation: nil},
+  {name: "Bill", email: "bill@gmail.com", password: "$2a$10$GpwmBNpiYjIIKAOWusOsPeTayXCkul77g/VwQX2FQf/orCeaaF8CO", admin: false, password_confirmation: nil}
 ])
