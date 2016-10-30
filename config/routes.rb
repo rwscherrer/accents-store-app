@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/accents' => 'accents#index'
   get '/accents/new' => 'accents#new'
   post '/accents' => 'accents#create'
+  get '/new_feature' => 'accents#new_feature'
 
   get '/accents/random' => 'accents#random'
   
