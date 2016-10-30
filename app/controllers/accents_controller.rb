@@ -1,6 +1,6 @@
 class AccentsController < ApplicationController
 
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show, :new_feature]
 
   def index
     @accents = Accent.all.includes(:images)
@@ -64,6 +64,13 @@ class AccentsController < ApplicationController
    
     @accent = Accent.find(params[:id])
  
+  end
+
+  def new_feature
+
+    @all_accents = Accent.all
+
+
   end
 
   def update

@@ -1,3 +1,13 @@
+User.create!([
+  {name: "joe", email: "joe@gmail.com", password: "$2a$10$g98sxnm6SWN2irVsawn7wesPoHK7XapZUeeXq0MJ6ckz5VOpzuTWy", admin: false, password_confirmation: nil},
+  {name: "AdminBob", email: "adminbob@gmail.com", password: "$2a$10$j8ERxrk1cf6QaThmV8ARWux.WZHtWPhUVt5SF1a9ezEBJ1sJk72hy", admin: true, password_confirmation: nil},
+  {name: "Bill", email: "bill@gmail.com", password: "$2a$10$GpwmBNpiYjIIKAOWusOsPeTayXCkul77g/VwQX2FQf/orCeaaF8CO", admin: false, password_confirmation: nil}
+])
+Supplier.create!([
+  {name: "Hilarious Accents", email: "ha_ha@hilariousaccents.com", phone: "312-555-1234"},
+  {name: "What You Talkin Bout Willis", email: "arnold@wytbw.com", phone: "630-555-1234"},
+  {name: "Funny Talkers", email: "funnyguy@funnytalkers.com", phone: "773-555-1234"}
+])
 Accent.create!([
   {name: "Charlie Brown Adults", price: "1000.0", description: "You will wah wah wah with the best of them.", in_stock: nil, supplier_id: 1},
   {name: "Sylvester", price: "10000.0", description: "We will teach you Sssthufferin Sssthuccotash.", in_stock: nil, supplier_id: 2},
@@ -42,13 +52,4 @@ Order.create!([
   {user_id: 2, subtotal: "20000.0", tax: "1800.0", total: "21800.0"},
   {user_id: 2, subtotal: "2000.0", tax: "180.0", total: "2180.0"}
 ])
-Supplier.create!([
-  {name: "Hilarious Accents", email: "ha_ha@hilariousaccents.com", phone: "312-555-1234"},
-  {name: "What You Talkin Bout Willis", email: "arnold@wytbw.com", phone: "630-555-1234"},
-  {name: "Funny Talkers", email: "funnyguy@funnytalkers.com", phone: "773-555-1234"}
-])
-User.create!([
-  {name: "joe", email: "joe@gmail.com", password: "$2a$10$g98sxnm6SWN2irVsawn7wesPoHK7XapZUeeXq0MJ6ckz5VOpzuTWy", admin: false, password_confirmation: nil},
-  {name: "AdminBob", email: "adminbob@gmail.com", password: "$2a$10$j8ERxrk1cf6QaThmV8ARWux.WZHtWPhUVt5SF1a9ezEBJ1sJk72hy", admin: true, password_confirmation: nil},
-  {name: "Bill", email: "bill@gmail.com", password: "$2a$10$GpwmBNpiYjIIKAOWusOsPeTayXCkul77g/VwQX2FQf/orCeaaF8CO", admin: false, password_confirmation: nil}
-])
+
